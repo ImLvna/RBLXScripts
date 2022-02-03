@@ -1,6 +1,6 @@
-print('start 10s')
-wait(10)
-print('10s up')
+print('start 15s')
+wait(15)
+print('15s up')
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
         if syn~=nil then 
