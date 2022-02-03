@@ -1,6 +1,10 @@
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
-        syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/ImLvna/RBLXScripts/main/infiniteRoyalGems.lua', true))()")
+        if syn.queue_on_teleport then 
+            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/ImLvna/RBLXScripts/main/infiniteRoyalGems.lua', true))()")
+        else 
+            queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/ImLvna/RBLXScripts/main/infiniteRoyalGems.lua', true))()")
+        end
     end
 end)
 wait(1)
